@@ -82,7 +82,7 @@ def compute_all_money(items):
 def get_bills(bills, year, month):
     dicts = to_dict(bills, year, month)
     all_bills = get_all_bills(dicts)
-    meta_data_file = Path('./meta_data.yaml')
+    meta_data_file = Path('config.yaml')
     meta_data = yaml.load(meta_data_file.open('r', encoding='utf-8'), Loader=yaml.FullLoader)
 
     item_names_dicts: dict = meta_data['item_name']
